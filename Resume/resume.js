@@ -73,169 +73,226 @@ resumeData = {
 
 function addResume() {
     //function buildResume() {
-        //*********************************************************************
-        //  Add Resume Header section
-        //*********************************************************************
+    //*********************************************************************
+    //  Add Resume Header section
+    //*********************************************************************
 
-        $('.name').append($('<p>', { text: resumeData.fName + ' ' + resumeData.lName }));
-        $('.address').append($('<p>', { text: resumeData.address }));
-        $('.phone').append($('<p>', { text: resumeData.phone }));
-        $('.linkedin').append($('<a>', { href: resumeData.linkedin, text: resumeData.linkedin }));
-        $('.email').append($('<a>', { href: resumeData.email, text: resumeData.email }));
+    $('.name').append($('<p>', { text: resumeData.fName + ' ' + resumeData.lName }));
+    $('.address').append($('<p>', { text: resumeData.address }));
+    $('.phone').append($('<p>', { text: resumeData.phone }));
+    $('.linkedin').append($('<a>', { href: resumeData.linkedin, text: resumeData.linkedin }));
+    $('.email').append($('<a>', { href: resumeData.email, text: resumeData.email }));
 
-        //*********************************************************************
-        //  Add About section
-        //*********************************************************************
+    //*********************************************************************
+    //  Add About section
+    //*********************************************************************
 
-        // About section header
-        $('#aboutHeader1').append(resumeData.introHeader1);
-        $('#aboutHeader2').append(resumeData.introHeader2);
+    // About section header
+    $('#aboutHeader1').append(resumeData.introHeader1);
+    $('#aboutHeader2').append(resumeData.introHeader2);
 
-        // About section discription
-        $('#about').append($('<p>', { text: resumeData.intro1 }));
-        $('#about').append($('<p>', { text: resumeData.intro2 }));
+    // About section discription
+    $('#about').append($('<p>', { text: resumeData.intro1 }));
+    $('#about').append($('<p>', { text: resumeData.intro2 }));
 
-        // List of areas of expertise
-        function addExpertise(label, expertise) {
-            $('#expertiseHeader').append($('<p>', { text: label }));
-            var target;
-            $.each(expertise, function (i, val) {
-                if (i < (expertise.length / 2)) {
-                    target = "expertiseCol1";
-                } else {
-                    target = "expertiseCol2";
-                }
-                $('#' + target).append($('<p>', { text: ' - ' + val }));
-            });
-        }
+    // List of areas of expertise
+    function addExpertise(label, expertise) {
+        $('#expertiseHeader').append($('<p>', { text: label }));
+        var target;
+        $.each(expertise, function (i, val) {
+            if (i < (expertise.length / 2)) {
+                target = "expertiseCol1";
+            } else {
+                target = "expertiseCol2";
+            }
+            $('#' + target).append($('<p>', { text: ' - ' + val }));
+        });
+    }
 
-        addExpertise(resumeData.expertiseLabel, resumeData.expertise, "skills");
+    addExpertise(resumeData.expertiseLabel, resumeData.expertise, "skills");
 
-        //*********************************************************************
-        //  Add Skills section
-        //*********************************************************************
+    //*********************************************************************
+    //  Add Skills section
+    //*********************************************************************
 
-        // Skill section header
-        $('#skillsHeader').append($('<p>', { text: resumeData.skillsHeader }));
+    // Skill section header
+    $('#skillsHeader').append($('<p>', { text: resumeData.skillsHeader }));
 
-        // List of skills
-        function addSkills(label, skill, target) {
-            $('#' + target + "Col1").append(label);
-            $.each(skill, function (i, val) {
-                $('#' + target + "Col2").append(val);
-                if (i < skill.length - 1) {
-                    $('#' + target + "Col2").append(", ");
-                }
-            });
-        }
+    // List of skills
+    function addSkills(label, skill, target) {
+        $('#' + target + "Col1").append(label);
+        $.each(skill, function (i, val) {
+            $('#' + target + "Col2").append(val);
+            if (i < skill.length - 1) {
+                $('#' + target + "Col2").append(", ");
+            }
+        });
+    }
 
-        addSkills(resumeData.osLabel, resumeData.os, "os");
-        addSkills(resumeData.LanguagesLabel, resumeData.Languages, "languages");
-        addSkills(resumeData.dbLabel, resumeData.db, "db");
-        addSkills(resumeData.toolsLabel, resumeData.tools, "tools");
-        addSkills(resumeData.methodLabel, resumeData.method, "methods");
+    addSkills(resumeData.osLabel, resumeData.os, "os");
+    addSkills(resumeData.LanguagesLabel, resumeData.Languages, "languages");
+    addSkills(resumeData.dbLabel, resumeData.db, "db");
+    addSkills(resumeData.toolsLabel, resumeData.tools, "tools");
+    addSkills(resumeData.methodLabel, resumeData.method, "methods");
 
-        //*********************************************************************
-        //  Add Experience sections
-        //*********************************************************************
-        function addExperience(job, target) {
-            // experience header
-            $('#' + target).append($('<p>', { class: "sHeader", text: job.experienceHeader }));
+    //*********************************************************************
+    //  Add Experience sections
+    //*********************************************************************
+    function addExperience(job, target) {
+        // experience header
+        $('#' + target).append($('<p>', { class: "sHeader", text: job.experienceHeader }));
 
-            // 1st experience line  ( Company and Date )
-            $('#' + target).append($('<div>', { class: "row subHeader label" }));
-            $('#' + target + ' .row').append($('<div>', { class: "col-sm", text: job.corp }));
-            $('#' + target + ' .row').append($('<div>', { class: "col-sm text-right", text: job.dates }));
+        // 1st experience line  ( Company and Date )
+        $('#' + target).append($('<div>', { class: "row subHeader label" }));
+        $('#' + target + ' .row').append($('<div>', { class: "col-sm", text: job.corp }));
+        $('#' + target + ' .row').append($('<div>', { class: "col-sm text-right", text: job.dates }));
 
-            // 2st experience line  ( Title and Location)
-            $('#' + target).append($('<p>', { class: "subHeader" }));
-            $('#' + target + ' p.subHeader').append($('<span>', { class: "label", text: job.title }));
-            $('#' + target + ' p.subHeader').append(", " + job.location);
+        // 2st experience line  ( Title and Location)
+        $('#' + target).append($('<p>', { class: "subHeader" }));
+        $('#' + target + ' p.subHeader').append($('<span>', { class: "label", text: job.title }));
+        $('#' + target + ' p.subHeader').append(", " + job.location);
 
-            // Experience discription
-            $('#' + target).append($('<div>', { class: "expAbout", text: job.about }));
+        // Experience discription
+        $('#' + target).append($('<div>', { class: "expAbout", text: job.about }));
 
-            // Experience list
-            $('#' + target).append('<ul></ul>');
-            $.each(job.examples, function (i, val) {
-                $('#' + target + ' ul').append($('<li>', { class: "example", text: val }));
-            });
-        }
+        // Experience list
+        $('#' + target).append('<ul></ul>');
+        $.each(job.examples, function (i, val) {
+            $('#' + target + ' ul').append($('<li>', { class: "example", text: val }));
+        });
+    }
 
-        addExperience(resumeData.jobs[0], "experience1");
-        addExperience(resumeData.jobs[1], "experience2");
+    addExperience(resumeData.jobs[0], "experience1");
+    addExperience(resumeData.jobs[1], "experience2");
 
-        //*********************************************************************
-        //  Add Education section
-        //*********************************************************************
-        $('#education').append($('<p>', { class: "sHeader", text: resumeData.educationHeader }));
-        $('#education').append($('<span>', { class: "label", text: resumeData.degree + ', ' }));
-        $('#education').append($('<span>', { class: "label", text: resumeData.major + ', ' }));
-        $('#education').append($('<span>', { class: "label", text: resumeData.university + ', ' }));
-        $('#education').append($('<span>', { text: resumeData.universityLocation }));
-
-
-        (function () {
-            $.getJSON("resume.json", function (json) {
-                console.log("JSON Data: " + json);
-            });
-        }());
-    //}
-/*
-    (function () {
-            $.ajax({
-
-                // The 'type' property sets the HTTP method.
-                // A value of 'PUT' or 'DELETE' will trigger a preflight request.
-                type: 'GET',
-              
-                // The URL to make the request to.
-                //url: '../Resume/resume.json',
-                url: 'https://github.com/ryan-bauermeister/ryan-bauermeister.github.io/blob/master/resume.json',
-              
-                // The 'contentType' property sets the 'Content-Type' header.
-                // The JQuery default for this property is
-                // 'application/x-www-form-urlencoded; charset=UTF-8', which does not trigger
-                // a preflight. If you set this value to anything other than
-                // application/x-www-form-urlencoded, multipart/form-data, or text/plain,
-                // you will trigger a preflight request.
-                contentType: 'text/plain',
-              
-                xhrFields: {
-                  // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
-                  // This can be used to set the 'withCredentials' property.
-                  // Set the value to 'true' if you'd like to pass cookies to the server.
-                  // If this is enabled, your server must respond with the header
-                  // 'Access-Control-Allow-Credentials: true'.
-                  withCredentials: false
-                },
-              
-                headers: {
-                  // Set any custom headers here.
-                  // If you set any non-simple headers, your server must include these
-                  // headers in the 'Access-Control-Allow-Headers' response header.
-                },
-              
-                dataType: 'json',
-                success: function (status, xhr) {
-                    console.log('Resume data loaded - status: ' + status );
-                },
-                error: function (xhr, status, error) {
-                    console.log('Error resume data failed to load - status: ' + status);
-                }
-              });
-    })();
+    //*********************************************************************
+    //  Add Education section
+    //*********************************************************************
+    $('#education').append($('<p>', { class: "sHeader", text: resumeData.educationHeader }));
+    $('#education').append($('<span>', { class: "label", text: resumeData.degree + ', ' }));
+    $('#education').append($('<span>', { class: "label", text: resumeData.major + ', ' }));
+    $('#education').append($('<span>', { class: "label", text: resumeData.university + ', ' }));
+    $('#education').append($('<span>', { text: resumeData.universityLocation }));
 
 
     (function () {
-        // $.getJSON("../Resume/resume.json", function (json) {
-        $.getJSON("https://github.com/ryan-bauermeister/ryan-bauermeister.github.io/blob/master/resume.json", function (json) {
+        $.getJSON("resume.json", function (json) {
             console.log("JSON Data: " + json);
         });
     }());
 
+    // Assign handlers immediately after making the request,
+    // and remember the jqxhr object for this request
+    var jqxhr = $.getJSON("resume.json", function () {
+        console.log("success");
+    })
+        .done(function () {
+            console.log("second success");
+        })
+        .fail(function () {
+            console.log("error");
+        })
+        .always(function () {
+            console.log("complete");
+        });
 
-    (function () {
+        console.log(jqxhr);
+
+
+
+
+
+    //}
+    /*
+        (function () {
+                $.ajax({
+    
+                    // The 'type' property sets the HTTP method.
+                    // A value of 'PUT' or 'DELETE' will trigger a preflight request.
+                    type: 'GET',
+                  
+                    // The URL to make the request to.
+                    //url: '../Resume/resume.json',
+                    url: 'https://github.com/ryan-bauermeister/ryan-bauermeister.github.io/blob/master/resume.json',
+                  
+                    // The 'contentType' property sets the 'Content-Type' header.
+                    // The JQuery default for this property is
+                    // 'application/x-www-form-urlencoded; charset=UTF-8', which does not trigger
+                    // a preflight. If you set this value to anything other than
+                    // application/x-www-form-urlencoded, multipart/form-data, or text/plain,
+                    // you will trigger a preflight request.
+                    contentType: 'text/plain',
+                  
+                    xhrFields: {
+                      // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
+                      // This can be used to set the 'withCredentials' property.
+                      // Set the value to 'true' if you'd like to pass cookies to the server.
+                      // If this is enabled, your server must respond with the header
+                      // 'Access-Control-Allow-Credentials: true'.
+                      withCredentials: false
+                    },
+                  
+                    headers: {
+                      // Set any custom headers here.
+                      // If you set any non-simple headers, your server must include these
+                      // headers in the 'Access-Control-Allow-Headers' response header.
+                    },
+                  
+                    dataType: 'json',
+                    success: function (status, xhr) {
+                        console.log('Resume data loaded - status: ' + status );
+                    },
+                    error: function (xhr, status, error) {
+                        console.log('Error resume data failed to load - status: ' + status);
+                    }
+                  });
+        })();
+    
+    
+        (function () {
+            // $.getJSON("../Resume/resume.json", function (json) {
+            $.getJSON("https://github.com/ryan-bauermeister/ryan-bauermeister.github.io/blob/master/resume.json", function (json) {
+                console.log("JSON Data: " + json);
+            });
+        }());
+    
+    
+        (function () {
+            $.ajaxSetup({
+                beforeSend: function (xhr) {
+                    if (xhr.overrideMimeType) {
+                        xhr.overrideMimeType("application/json");
+                    }
+                }
+            });
+    
+            $.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?', function (data) {
+                console.log("JSON Data: " + data);
+            });
+        })();
+    
+         
+        (function () {
+            var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+            $.getJSON(flickerAPI, {
+                tags: "mount rainier",
+                tagmode: "any",
+                format: "json"
+            })
+                .done(function (data) {
+                    console.log("JSON Data: " + data);
+                    
+                    $.each(data.items, function (i, item) {
+                        $("<img>").attr("src", item.media.m).appendTo("#images");
+                        if (i === 3) {
+                            return false;
+                        }
+                    });
+                    
+                });
+        })();
+    
+    
         $.ajaxSetup({
             beforeSend: function (xhr) {
                 if (xhr.overrideMimeType) {
@@ -243,61 +300,26 @@ function addResume() {
                 }
             }
         });
-
-        $.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?', function (data) {
-            console.log("JSON Data: " + data);
-        });
-    })();
-
-     
-    (function () {
-        var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-        $.getJSON(flickerAPI, {
-            tags: "mount rainier",
-            tagmode: "any",
-            format: "json"
-        })
-            .done(function (data) {
-                console.log("JSON Data: " + data);
-                
-                $.each(data.items, function (i, item) {
-                    $("<img>").attr("src", item.media.m).appendTo("#images");
-                    if (i === 3) {
-                        return false;
+    
+        
+    
+       
+            var module = (function () {
+                var jqxhr = $.ajax({
+                    type: 'GET',
+                    url: 'https://github.com/ryan-bauermeister/Portfolio/blob/master/Resume/resume.json',
+                    //data: resumeData,
+                    dataType: 'json',
+                    success: function (data, status, xhr) {
+                        console.log('Resume data loaded - status: ' + data.d.Status + '\n' + data.d.Message);
+                    },
+                    error: function (xhr, status, error) {
+                        console.log('Error resume data failed to load - status: ' + status);
                     }
                 });
-                
-            });
-    })();
-
-
-    $.ajaxSetup({
-        beforeSend: function (xhr) {
-            if (xhr.overrideMimeType) {
-                xhr.overrideMimeType("application/json");
-            }
-        }
-    });
-
-    
-
-   
-        var module = (function () {
-            var jqxhr = $.ajax({
-                type: 'GET',
-                url: 'https://github.com/ryan-bauermeister/Portfolio/blob/master/Resume/resume.json',
-                //data: resumeData,
-                dataType: 'json',
-                success: function (data, status, xhr) {
-                    console.log('Resume data loaded - status: ' + data.d.Status + '\n' + data.d.Message);
-                },
-                error: function (xhr, status, error) {
-                    console.log('Error resume data failed to load - status: ' + status);
-                }
-            });
-    
-        }());
-    */
+        
+            }());
+        */
 }
 
 window.onload = function () {
@@ -305,7 +327,7 @@ window.onload = function () {
 
     addSidebar("sidebar");
 
-        addNavbar("navbar");
+    addNavbar("navbar");
 
 
 }
