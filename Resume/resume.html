@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- JS Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- CSS Libraries-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
+    <!-- Custom Script -->
+    <script src="../Common/common.js"></script>
+    <script src="resume.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../Common/common.css">
+    <link rel="stylesheet" href="resume.css">
+
+    <!-- JSON Data 
+    <link rel="manifest" href="../Common/manifest.json">
+    -->
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar"></nav>
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <aside class="col-md-2 d-none d-md-block sidebar">
+                <ul class="nav">
+                    <div id="sidebar">
+                    </div>
+                </ul>
+
+            </aside>
+
+            <!-- Add Resume -->
+            <section class="col-md-10" id="content">
+                <!-- Resume header section -->
+                <header>
+                    <section>
+                        <div class="name"></div>
+                    </section>
+                    <section class="row">
+                        <div class="col-sm address"></div>
+                        <div class="col-sm text-right phone"></div>
+                    </section>
+                    <section class="row">
+                        <div class="col-sm linkedin"></div>
+                        <div class="col-sm text-right email"></div>
+                    </section>
+                </header>
+
+                <!-- Resume intro section -->
+                <section id="intro">
+                    <article class="about">
+                        <div id="aboutHeader1" class="sHeader"></div>
+                        <div id="aboutHeader2" class="sHeader"></div>
+                        <div id="about"> </div>
+                    </article>
+                    <article>
+                        <div id="expertiseHeader"></div>
+                        <div class="row">
+                            <div id="expertiseCol1" class="col-sm-5"></div>
+                            <div id="expertiseCol2" class="col-sm-5"></div>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Resume skills section -->
+                <section id="skills">
+                    <article>
+                        <div id="skillsHeader" class="sHeader"></div>
+                        <div class="row">
+                            <div id="osCol1" class="col-sm-4 label"></div>
+                            <div id="osCol2" class="col-sm"></div>
+                        </div>
+                        <div class="row">
+                            <div id="languagesCol1" class="col-sm-4 label"></div>
+                            <div id="languagesCol2" class="col-sm"></div>
+                        </div>
+                        <div class="row">
+                            <div id="dbCol1" class="col-sm-4 label"></div>
+                            <div id="dbCol2" class="col-sm"></div>
+                        </div>
+                        <div class="row">
+                            <div id="toolsCol1" class="col-sm-4 label"></div>
+                            <div id="toolsCol2" class="col-sm"></div>
+                        </div>
+                        <div class="row">
+                            <div id="methodsCol1" class="col-sm-4 label"></div>
+                            <div id="methodsCol2" class="col-sm"></div>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Resume experience section -->
+                <section id="experience1">
+                </section>
+
+                <section id="experience2">
+                </section>
+
+                <!-- Resume education section -->
+                <section id="education">
+                </section>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+/********************************************************
+     Sidebar styles 
+*********************************************************/
+#sidebar p {
+    margin-bottom: 0;
+}
+
+#sidebar li {
+    padding-top: 7px;
+    padding-left: 30px; 
+}
+
+#sidebar a {
+    color: #333;
+}
+
+.sidebar {
+    background-color: #f0f0f4;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    overflow-y: auto;
+    max-width: 235px;
+    min-width: 235px;
+    padding: 24px;
+    border-right: solid;
+    border-right-color: #e3ebf6;
+    border-right-width: 2px;
+}
+
+.sidebar .nav-link {
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+}
+
+.sidebar .label {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#sidebar .tech {
+    list-style-type: circle;
+    margin-left: 50px;
+    padding-left: 0;
+}
+
+.icon {
+    font-size: 12px;
+    float: left;
+    padding-top: 4px;
+    padding-right: 10px;
+    display: flex;
+    align-items:center;
+}
+
+.segmentIcon {
+    padding-top: 2px;
+    font-size: 20px;
+}
+
+.sidebar-divider {
+    border: 0;
+    border-top: 1px solid;
+    border-color: #e3ebf6;
+    margin-top: 12px!important;
+    margin-bottom: 12px!important;
+    min-width: 100%;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/********************************************************
+     Navbar styles 
+*********************************************************/
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand { 
+    background-color: darkcyan;
+    width: 235px;
+    padding-left: 16px;
+    padding-right: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.nav-item {
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
+
+/********************************************************
+     Content section styles 
+*********************************************************/
+
+#content {
+    padding-top: 10px;
+    padding-left: 125px;
+    padding-right: 125px;
+}
+
+/********************************************************
+     Other styles 
+*********************************************************/
+
+.container-fluid {
+    padding: 0;
+}
