@@ -176,7 +176,7 @@ function addResume() {
 
 
         (function () {
-            $.getJSON("Resume/resume.css/resume.json", function (json) {
+            $.getJSON("Resume/resume.json", function (json) {
                 console.log("JSON Data: " + json);
             });
         }());
