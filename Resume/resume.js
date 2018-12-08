@@ -174,6 +174,12 @@ function addResume() {
         $('#education').append($('<span>', { class: "label", text: resumeData.university + ', ' }));
         $('#education').append($('<span>', { text: resumeData.universityLocation }));
 
+
+        (function () {
+            $.getJSON("Resume/resume.css/resume.json", function (json) {
+                console.log("JSON Data: " + json);
+            });
+        }());
     //}
 /*
     (function () {
