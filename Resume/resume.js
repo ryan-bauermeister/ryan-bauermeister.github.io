@@ -176,17 +176,26 @@ function addResume() {
 
 
     (function () {
-        $.getJSON("resume.json", function (json) {
-            console.log("JSON Data: " + json);
+        $.getJSON("resume.json", function (data) {
+            console.log("success");
+        })
+        .done(function (data) {
+            console.log(data);
+        })
+        .fail(function () {
+            console.log("error");
+        })
+        .always(function () {
+            console.log("complete");
         });
     }());
-
+    /*
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
     var jqxhr = $.getJSON("resume.json", function () {
         console.log("success");
     })
-        .done(function () {
+        .done(function (data) {
             console.log("second success");
         })
         .fail(function () {
@@ -203,7 +212,7 @@ function addResume() {
 
 
     //}
-    /*
+
         (function () {
                 $.ajax({
     
