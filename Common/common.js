@@ -7,12 +7,12 @@ sideBarData = {
     "segment": [{
         "label": "Page Discription",
         "url": "",
-        "icon": "fas fa-bars",
+        "icon": "fas fa-bars"
     },
     {
         "label": "Technologies",
         "url": "",
-        "icon": "fas fa-cog",
+        "icon": "fas fa-cog"
     },
     {
         "label": "Github Files",
