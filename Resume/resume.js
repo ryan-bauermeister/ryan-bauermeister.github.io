@@ -174,165 +174,176 @@ function addResume() {
     $('#education').append($('<span>', { class: "label", text: resumeData.university + ', ' }));
     $('#education').append($('<span>', { text: resumeData.universityLocation }));
 
-var repositories;
+    var repositories;
     (function () {
-        $.getJSON("resume.json", function (data) {
-            repositories = data;
-            console.log("success");
-        })
-        .done(function (data) {
-            console.log(data);
-        })
-        //.fail(function () {
-        //    console.log("error");
-        .fail(function(data, textStatus) {
-            console.log("error " + textStatus);
-            console.log("incoming Text " + data.responseText);
-        })        
-        .always(function () {
-            console.log("complete");
+        $.getJSON({
+            url: "resume.json"
+        }).done(function (result, status, xhr) {
+            alert(result)
+        }).fail(function (xhr, status, error) {
+            alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
         });
     }());
+
     /*
-    // Assign handlers immediately after making the request,
-    // and remember the jqxhr object for this request
-    var jqxhr = $.getJSON("resume.json", function () {
-        console.log("success");
-    })
-        .done(function (data) {
-            console.log("second success");
-        })
-        .fail(function () {
-            console.log("error");
-        })
-        .always(function () {
-            console.log("complete");
-        });
-
-        console.log(jqxhr);
-
-
-
-
-
-    //}
-
-        (function () {
-                $.ajax({
-    
-                    // The 'type' property sets the HTTP method.
-                    // A value of 'PUT' or 'DELETE' will trigger a preflight request.
-                    type: 'GET',
-                  
-                    // The URL to make the request to.
-                    //url: '../Resume/resume.json',
-                    url: 'https://github.com/ryan-bauermeister/ryan-bauermeister.github.io/blob/master/resume.json',
-                  
-                    // The 'contentType' property sets the 'Content-Type' header.
-                    // The JQuery default for this property is
-                    // 'application/x-www-form-urlencoded; charset=UTF-8', which does not trigger
-                    // a preflight. If you set this value to anything other than
-                    // application/x-www-form-urlencoded, multipart/form-data, or text/plain,
-                    // you will trigger a preflight request.
-                    contentType: 'text/plain',
-                  
-                    xhrFields: {
-                      // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
-                      // This can be used to set the 'withCredentials' property.
-                      // Set the value to 'true' if you'd like to pass cookies to the server.
-                      // If this is enabled, your server must respond with the header
-                      // 'Access-Control-Allow-Credentials: true'.
-                      withCredentials: false
-                    },
-                  
-                    headers: {
-                      // Set any custom headers here.
-                      // If you set any non-simple headers, your server must include these
-                      // headers in the 'Access-Control-Allow-Headers' response header.
-                    },
-                  
-                    dataType: 'json',
-                    success: function (status, xhr) {
-                        console.log('Resume data loaded - status: ' + status );
-                    },
-                    error: function (xhr, status, error) {
-                        console.log('Error resume data failed to load - status: ' + status);
-                    }
-                  });
-        })();
-    
-    
-        (function () {
-            // $.getJSON("../Resume/resume.json", function (json) {
-            $.getJSON("https://github.com/ryan-bauermeister/ryan-bauermeister.github.io/blob/master/resume.json", function (json) {
-                console.log("JSON Data: " + json);
-            });
-        }());
-    
-    
-        (function () {
-            $.ajaxSetup({
-                beforeSend: function (xhr) {
-                    if (xhr.overrideMimeType) {
-                        xhr.overrideMimeType("application/json");
-                    }
-                }
-            });
-    
-            $.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?', function (data) {
-                console.log("JSON Data: " + data);
-            });
-        })();
-    
-         
-        (function () {
-            var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-            $.getJSON(flickerAPI, {
-                tags: "mount rainier",
-                tagmode: "any",
-                format: "json"
-            })
-                .done(function (data) {
-                    console.log("JSON Data: " + data);
-                    
-                    $.each(data.items, function (i, item) {
-                        $("<img>").attr("src", item.media.m).appendTo("#images");
-                        if (i === 3) {
-                            return false;
-                        }
-                    });
-                    
-                });
-        })();
-    
-    
-        $.ajaxSetup({
-            beforeSend: function (xhr) {
-                if (xhr.overrideMimeType) {
-                    xhr.overrideMimeType("application/json");
-                }
-            }
-        });
-    
-        
-    
+       (function () {
+           $.getJSON("resume.json", function (data) {
+               repositories = data;
+               console.log("success");
+           })
+           .done(function (data) {
+               console.log(data);
+           })
+           //.fail(function () {
+           //    console.log("error");
+           .fail(function(data, textStatus) {
+               console.log("error " + textStatus);
+               console.log("incoming Text " + data.responseText);
+           })        
+           .always(function () {
+               console.log("complete");
+           });
+       }());
+      
+       // Assign handlers immediately after making the request,
+       // and remember the jqxhr object for this request
+       var jqxhr = $.getJSON("resume.json", function () {
+           console.log("success");
+       })
+           .done(function (data) {
+               console.log("second success");
+           })
+           .fail(function () {
+               console.log("error");
+           })
+           .always(function () {
+               console.log("complete");
+           });
+   
+           console.log(jqxhr);
+   
+   
+   
+   
+   
+       //}
+   
+           (function () {
+                   $.ajax({
        
-            var module = (function () {
-                var jqxhr = $.ajax({
-                    type: 'GET',
-                    url: 'https://github.com/ryan-bauermeister/Portfolio/blob/master/Resume/resume.json',
-                    //data: resumeData,
-                    dataType: 'json',
-                    success: function (data, status, xhr) {
-                        console.log('Resume data loaded - status: ' + data.d.Status + '\n' + data.d.Message);
-                    },
-                    error: function (xhr, status, error) {
-                        console.log('Error resume data failed to load - status: ' + status);
-                    }
-                });
-        
-            }());
-        */
+                       // The 'type' property sets the HTTP method.
+                       // A value of 'PUT' or 'DELETE' will trigger a preflight request.
+                       type: 'GET',
+                     
+                       // The URL to make the request to.
+                       //url: '../Resume/resume.json',
+                       url: 'https://github.com/ryan-bauermeister/ryan-bauermeister.github.io/blob/master/resume.json',
+                     
+                       // The 'contentType' property sets the 'Content-Type' header.
+                       // The JQuery default for this property is
+                       // 'application/x-www-form-urlencoded; charset=UTF-8', which does not trigger
+                       // a preflight. If you set this value to anything other than
+                       // application/x-www-form-urlencoded, multipart/form-data, or text/plain,
+                       // you will trigger a preflight request.
+                       contentType: 'text/plain',
+                     
+                       xhrFields: {
+                         // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
+                         // This can be used to set the 'withCredentials' property.
+                         // Set the value to 'true' if you'd like to pass cookies to the server.
+                         // If this is enabled, your server must respond with the header
+                         // 'Access-Control-Allow-Credentials: true'.
+                         withCredentials: false
+                       },
+                     
+                       headers: {
+                         // Set any custom headers here.
+                         // If you set any non-simple headers, your server must include these
+                         // headers in the 'Access-Control-Allow-Headers' response header.
+                       },
+                     
+                       dataType: 'json',
+                       success: function (status, xhr) {
+                           console.log('Resume data loaded - status: ' + status );
+                       },
+                       error: function (xhr, status, error) {
+                           console.log('Error resume data failed to load - status: ' + status);
+                       }
+                     });
+           })();
+       
+       
+           (function () {
+               // $.getJSON("../Resume/resume.json", function (json) {
+               $.getJSON("https://github.com/ryan-bauermeister/ryan-bauermeister.github.io/blob/master/resume.json", function (json) {
+                   console.log("JSON Data: " + json);
+               });
+           }());
+       
+       
+           (function () {
+               $.ajaxSetup({
+                   beforeSend: function (xhr) {
+                       if (xhr.overrideMimeType) {
+                           xhr.overrideMimeType("application/json");
+                       }
+                   }
+               });
+       
+               $.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?', function (data) {
+                   console.log("JSON Data: " + data);
+               });
+           })();
+       
+            
+           (function () {
+               var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+               $.getJSON(flickerAPI, {
+                   tags: "mount rainier",
+                   tagmode: "any",
+                   format: "json"
+               })
+                   .done(function (data) {
+                       console.log("JSON Data: " + data);
+                       
+                       $.each(data.items, function (i, item) {
+                           $("<img>").attr("src", item.media.m).appendTo("#images");
+                           if (i === 3) {
+                               return false;
+                           }
+                       });
+                       
+                   });
+           })();
+       
+       
+           $.ajaxSetup({
+               beforeSend: function (xhr) {
+                   if (xhr.overrideMimeType) {
+                       xhr.overrideMimeType("application/json");
+                   }
+               }
+           });
+       
+           
+       
+          
+               var module = (function () {
+                   var jqxhr = $.ajax({
+                       type: 'GET',
+                       url: 'https://github.com/ryan-bauermeister/Portfolio/blob/master/Resume/resume.json',
+                       //data: resumeData,
+                       dataType: 'json',
+                       success: function (data, status, xhr) {
+                           console.log('Resume data loaded - status: ' + data.d.Status + '\n' + data.d.Message);
+                       },
+                       error: function (xhr, status, error) {
+                           console.log('Error resume data failed to load - status: ' + status);
+                       }
+                   });
+           
+               }());
+           */
 }
 
 window.onload = function () {
