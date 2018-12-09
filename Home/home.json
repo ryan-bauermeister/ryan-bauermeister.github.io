@@ -1,0 +1,126 @@
+{
+    "sideBarData": {
+        "segment": [
+            {
+                "label": "Page Discription",
+                "url": "",
+                "icon": "fas fa-bars"
+            },
+            {
+                "label": "Technologies",
+                "url": "",
+                "icon": "fas fa-cog"
+            },
+            {
+                "label": "Github Files",
+                "url": "",
+                "icon": "fab fa-github"
+            }
+        ],
+        "discription": "This  page is based on my resume and utilizes the technologies listed below.  All of the resume content is pulled from a JSON file.",
+        "technologies": [
+            "HTML",
+            "JavaScript",
+            "jQuery",
+            "CSS",
+            "Bootstrap"
+        ],
+        "github": [
+            {
+                "label": "resume.js",
+                "location": "https://www.google.com",
+                "icon": "far fa-file"
+            },
+            {
+                "label": "resume.css",
+                "location": "https://www.google.com",
+                "icon": "far fa-file"
+            },
+            {
+                "label": "resume.html",
+                "location": "https://www.google.com",
+                "icon": "far fa-file"
+            },
+            {
+                "label": "resume.json",
+                "location": "https://www.google.com",
+                "icon": "far fa-file"
+            },
+            {
+                "label": "common.css",
+                "location": "https://www.google.com",
+                "icon": "far fa-file"
+            },
+            {
+                "label": "common.js",
+                "location": "https://www.google.com",
+                "icon": "far fa-file"
+            }
+        ]
+    },
+    "tableData": {
+        "header": [
+            "Pages/Link",
+            "Discription",
+            "Technologies Used"
+        ],
+        "pages": [
+            {
+                "name": "Home",
+                "discription": "Introduction",
+                "skills": "HTML, CSS, JavaScript, jQuery",
+                "level": "Basic",
+                "url": "../Home/home.html"
+            },
+            {
+                "name": "Resume",
+                "discription": "My Resume",
+                "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery",
+                "level": "Basic",
+                "url": "../Resume/resume.html"
+            },
+            {
+                "name": "External Data Pull",
+                "discription": "Getting and Displaying Data",
+                "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery",
+                "level": "Basic",
+                "url": "../ComingSoon/comingSoon.html"
+            },
+            {
+                "name": "Angular Graph",
+                "discription": "Angular Graph",
+                "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, Angular, D3",
+                "level": "Basic",
+                "url": "../ComingSoon/comingSoon.html"
+            },
+            {
+                "name": "More Angular",
+                "discription": "Angular",
+                "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, Angular",
+                "level": "Basic",
+                "url": "../ComingSoon/comingSoon.html"
+            },
+            {
+                "name": "More Angular part 2",
+                "discription": "Angular",
+                "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, Angular",
+                "level": "Basic",
+                "url": "../ComingSoon/comingSoon.html"
+            },
+            {
+                "name": "React",
+                "discription": "React",
+                "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, React",
+                "level": "Basic",
+                "url": "../ComingSoon/comingSoon.html"
+            },
+            {
+                "name": "More React",
+                "discription": "More React",
+                "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, React",
+                "level": "Basic",
+                "url": "../ComingSoon/comingSoon.html"
+            }
+        ]
+    }
+}

@@ -1,74 +1,11 @@
-//*********************************************************************
-//  JSON Data
-//*********************************************************************
-
-tableData = {
-    "header": ["Pages/Link", "Discription", "Technologies Used"],
-    "pages": [{
-        "name": "Home",
-        "discription": "Introduction",
-        "skills": "HTML, CSS, JavaScript, jQuery",
-        "level": "Basic",
-        "url": "../Home/home.html"
-    },
-    {
-        "name": "Resume",
-        "discription": "My Resume",
-        "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery",
-        "level": "Basic",
-        "url": "../Resume/resume.html"
-    },
-    {
-        "name": "External Data Pull",
-        "discription": "Getting and Displaying Data",
-        "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery",
-        "level": "Basic",
-        "url": "../ComingSoon/comingSoon.html"
-    },
-    {
-        "name": "Angular Graph",
-        "discription": "Angular Graph",
-        "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, Angular, D3",
-        "level": "Basic",
-        "url": "../ComingSoon/comingSoon.html"
-    },
-    {
-        "name": "More Angular",
-        "discription": "Angular",
-        "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, Angular",
-        "level": "Basic",
-        "url": "../ComingSoon/comingSoon.html"
-    },
-    {
-        "name": "More Angular part 2",
-        "discription": "Angular",
-        "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, Angular",
-        "level": "Basic",
-        "url": "../ComingSoon/comingSoon.html"
-    },
-    {
-        "name": "React",
-        "discription": "React",
-        "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, React",
-        "level": "Basic",
-        "url": "../ComingSoon/comingSoon.html"
-    },
-    {
-        "name": "More React",
-        "discription": "More React",
-        "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, React",
-        "level": "Basic",
-        "url": "../ComingSoon/comingSoon.html"
-    }
-    ]
-}
-
 // To-do:  Add error handling
 
-//*********************************************************************
-//  Add table content
-//*********************************************************************
-function addtable(target) {
+// ********************************************************************************************
+// function to add home screen table content.
+// - target (this parameter should provide the target for the experience section)
+// - tableData (this parameter should provide data object for all the home screen table data)
+// ********************************************************************************************
+function addtable(target, tableData) {
 
     // Add table header
     $(target).append($('<thead>'));
@@ -76,12 +13,12 @@ function addtable(target) {
     for (i = 0, l = tableData.header.length; i < l; i++) {
         $('thead tr').append($('<th>', { text: tableData.header[i] }));
     }
-    
+
     // Add table contents
     $(target).append($('<tbody>'));
     for (i = 0, l = tableData.pages.length; i < l; i++) {
         $('tbody').append($('<tr>', { id: 'tr' + i }));
-        $('#tr' + i).append($('<td>', {  }));
+        $('#tr' + i).append($('<td>', {}));
         $('#tr' + i + ' td').append($('<a>', { href: tableData.pages[i].url, text: tableData.pages[i].name }));
         $('#tr' + i).append($('<td>', { text: tableData.pages[i].discription }));
         $('#tr' + i).append($('<td>', { text: tableData.pages[i].skills }));
@@ -89,11 +26,21 @@ function addtable(target) {
 }
 
 window.onload = function () {
-
-    addSidebar("sidebar");
+    // ************************************************************************************
+    // function to pull JSON data and to add the sidebar and home screen table data.
+    // ************************************************************************************
+    (function () {
+        $.getJSON({
+            url: "home.json"
+        }).done(function (result) {
+            addtable("table", result.tableData);
+            addSidebar("sidebar", result.sideBarData);
+            console.log("Sidebar and home json successful imported.");
+        }).fail(function (xhr, status, error) {
+            console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+        });
+    }());
 
     addNavbar("navbar");
-
-    addtable("table");
 }
 
