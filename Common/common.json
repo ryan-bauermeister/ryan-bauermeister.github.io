@@ -1,0 +1,48 @@
+{"menuData": {
+    "title": "Ryan Bauermeister",
+    "col": [{
+        "label": "Home",
+        "location": "../Home/home.html"
+    },
+    {
+        "label": "Basic Site",
+        "options": [{
+            "label": "Resume",
+            "location": "../Resume/resume.html"
+        }, {
+            "label": "Menu Option 2",
+            "location": "../ComingSoon/comingSoon.html"
+        }, {
+            "label": "Menu Option 3",
+            "location": "../ComingSoon/comingSoon.html"
+        }]
+    },
+    {
+        "label": "Angular Site",
+        "options": [{
+            "label": "Option 1 - for future development",
+            "location": "../ComingSoon/comingSoon.html"
+        }, {
+            "label": "Option 2 - for future development",
+            "location": "../ComingSoon/comingSoon.html"
+        }, {
+            "label": "Option 3 - for future development",
+            "location": "../ComingSoon/comingSoon.html"
+        }]
+    },
+    {
+        "label": "React Site",
+        "options": [{
+            "label": "Option 1 - for future development",
+            "location": "../ComingSoon/comingSoon.html"
+        }, {
+            "label": "Option 2 - for future development",
+            "location": "../ComingSoon/comingSoon.html"
+        }, {
+            "label": "Option 3 - for future development",
+            "location": "../ComingSoon/comingSoon.html"
+        }]
+    }
+    ]
+}
+}

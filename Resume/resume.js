@@ -2,6 +2,7 @@
 // function to get resume json and build the resume
 // ************************************************************************
 function addResume() {
+    
     // ********************************************************************************************
     // function to add resume data and format
     // - resumeData (this parameter should provide the resume data in json format for the section)
@@ -132,7 +133,7 @@ function addResume() {
         }).done(function (result) {
             addSidebar("sidebar", result.sideBarData);
             buildResume(result.resumeData)
-            console.log(result);
+            console.log("Sidebar and resume json successful imported.");
         }).fail(function (xhr, status, error) {
             console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
         });
