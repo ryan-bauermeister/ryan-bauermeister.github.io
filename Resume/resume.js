@@ -131,7 +131,7 @@ function addResume() {
             url: "resume.json"
         }).done(function (result) {
             addSidebar("sidebar", result.sideBarData);
-            buildResume(result.sideBarData)
+            buildResume(result.resumeData)
             console.log(result);
         }).fail(function (xhr, status, error) {
             console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
