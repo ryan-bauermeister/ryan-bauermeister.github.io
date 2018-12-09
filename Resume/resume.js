@@ -132,8 +132,7 @@ function addResume() {
             url: "resume.json"
         }).done(function (result) {
             buildResume(result.resumeData);
-            addSidebar("sidebar", result.sideBarData);
-            addNavbar("navbar");            
+            addSidebar("sidebar", result.sideBarData);                      
             console.log("Sidebar and resume json successful imported.");
         }).fail(function (xhr, status, error) {
             console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
@@ -143,4 +142,5 @@ function addResume() {
 
 window.onload = function () {
     addResume();    
+    addNavbar("navbar");  
 }
