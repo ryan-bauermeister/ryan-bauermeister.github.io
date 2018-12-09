@@ -180,6 +180,7 @@ function addResume() {
             url: "resume.json"
         }).done(function (result, status, xhr) {
             alert(result)
+            console.log(result);
         }).fail(function (xhr, status, error) {
             alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
         });
