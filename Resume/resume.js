@@ -174,9 +174,10 @@ function addResume() {
     $('#education').append($('<span>', { class: "label", text: resumeData.university + ', ' }));
     $('#education').append($('<span>', { text: resumeData.universityLocation }));
 
-
+var repositories;
     (function () {
         $.getJSON("resume.json", function (data) {
+            repositories = data;
             console.log("success");
         })
         .done(function (data) {
