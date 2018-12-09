@@ -49,6 +49,7 @@ function addNavbar(target) {
                 $('#navCol' + i).append($('<a>', { class: "nav-link", href: menuData.col[i].location, text: menuData.col[i].label }));
             }
         }
+    }
         // ************************************************************************************
         // function to pull JSON data and to add the navBar and menu data.
         // ************************************************************************************
@@ -62,7 +63,6 @@ function addNavbar(target) {
                 console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
             });
         }());
-    }
 }
 
 // ************************************************************************
