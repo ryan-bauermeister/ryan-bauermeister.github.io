@@ -183,9 +183,12 @@ var repositories;
         .done(function (data) {
             console.log(data);
         })
-        .fail(function () {
-            console.log("error");
-        })
+        //.fail(function () {
+        //    console.log("error");
+        .fail(function(data, textStatus) {
+            console.log("error " + textStatus);
+            console.log("incoming Text " + data.responseText);
+        })        
         .always(function () {
             console.log("complete");
         });
