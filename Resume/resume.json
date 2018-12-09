@@ -4,12 +4,12 @@
             {
                 "label": "Page Discription",
                 "url": "",
-                "icon": "fas fa-bars",
+                "icon": "fas fa-bars"
             },
             {
                 "label": "Technologies",
                 "url": "",
-                "icon": "fas fa-cog",
+                "icon": "fas fa-cog"
             },
             {
                 "label": "Github Files",
@@ -157,7 +157,7 @@
                     "Integrated Notes applications with DB2, MS Excel spreadsheets, keeping data current across multiple platforms and allowing flexibility in manipulation large sets of data.",
                     "Recognized and received award for taking initiative and creating solution that supported requirements determination and approval process for high-value projects.",
                     "Designed innovative recovery instructions application to simulate SAP GUI, minimizing training needed for end users while meeting aggressive schedule / critical goals and implementing without issue.",
-                    "Created and maintained multiple sales support applications for pricing, call tracking, customer information, and opportunity identification, serving as key components to sales organization, facilitating customer interaction, and providing accurate and timely pricing in winning new business.",
+                    "Created and maintained multiple sales support applications for pricing, call tracking, customer information, and opportunity identification, serving as key components to sales organization, facilitating customer interaction, and providing accurate and timely pricing in winning new business."
                 ]
             }
         ],
