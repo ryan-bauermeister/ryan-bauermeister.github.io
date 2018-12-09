@@ -56,7 +56,7 @@ function addNavbar(target) {
             $.getJSON({
                 url: "resume.json"
             }).done(function (result) {
-                buildNavbar(target, result.menuData)
+                buildNavbar(target, result.menuData);
                 console.log("Menu json successful imported in.");
             }).fail(function (xhr, status, error) {
                 console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
