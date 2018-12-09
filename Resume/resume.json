@@ -17,7 +17,7 @@
                 "icon": "fab fa-github"
             }
         ],
-        "discription": "This page is based on my resume and utilizes the technologies listed below.  All of the resume content is pulled from a JSON file.",
+        "discription": "This  page is based on my resume and utilizes the technologies listed below.  All of the resume content is pulled from a JSON file.",
         "technologies": [
             "HTML",
             "JavaScript",
