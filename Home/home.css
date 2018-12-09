@@ -1,0 +1,30 @@
+body, html {
+    height: 100%
+}
+
+a {
+    color: black;
+}
+#content {
+    padding: 30px 150px;
+}
+
+#content article {
+    background-color: #f0f0f4;
+    border-radius: 8px;
+    padding: 20px 30px; 
+    margin: 20px;   
+}
+
+#content p {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#content .table {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
