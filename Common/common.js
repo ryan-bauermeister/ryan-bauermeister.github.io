@@ -75,7 +75,7 @@ function addNavbar(target) {
 // function to add the sidebar
 // - target (this parameter should provide the ID for the sidebar section)
 // ************************************************************************
-function addSidebar(target) {
+function addSidebar(target, sideBarData) {
 
     // ****************************************************************************
     // function to add a segment header to the sidebar
