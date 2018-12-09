@@ -55,7 +55,7 @@ function addNavbar(target) {
         // ************************************************************************************
         (function () {
             $.getJSON({
-                url: "common.json"
+                url: "../Common/common.json"
             }).done(function (result) {
                 buildNavbar(target, result.menuData);
                 console.log("Menu json successful imported in.");
