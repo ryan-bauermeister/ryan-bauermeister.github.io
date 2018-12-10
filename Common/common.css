@@ -83,10 +83,10 @@
 
 .navbar {
     padding: 0;
+    background-color: black;
 }
 
-.navbar-brand { 
-    background-color: darkcyan;
+.navbar-brand {    
     width: 235px;
     padding-left: 16px;
     padding-right: 50px;

@@ -100,7 +100,6 @@ function addSidebar(target, sideBarData) {
     $('#' + target).append($('<p>', { text: sideBarData.discription }));
     $('#' + target).append($('<div>', { class: "sidebar-divider" }));
 
-
     // *** Technologies section of the sidebar ***
     addSegmentHeader(1);
 
@@ -109,7 +108,6 @@ function addSidebar(target, sideBarData) {
         $('#' + target).append($('<li>', { class: "tech", text: sideBarData.technologies[i] }));
     }
     $('#' + target).append($('<div>', { class: "sidebar-divider" }));
-
 
     // *** Github section of the sidebar  ***
     addSegmentHeader(2);
