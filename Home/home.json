@@ -27,33 +27,38 @@
         ],
         "github": [
             {
-                "label": "resume.js",
-                "location": "https://www.google.com",
+                "label": "home.js",
+                "location": "https://github.com/ryan-bauermeister/Portfolio/blob/master/Home/home.js",
                 "icon": "far fa-file"
             },
             {
-                "label": "resume.css",
-                "location": "https://www.google.com",
+                "label": "home.css",
+                "location": "https://github.com/ryan-bauermeister/Portfolio/blob/master/Home/home.css",
                 "icon": "far fa-file"
             },
             {
-                "label": "resume.html",
-                "location": "https://www.google.com",
+                "label": "home.html",
+                "location": "https://github.com/ryan-bauermeister/Portfolio/blob/master/Home/home.html",
                 "icon": "far fa-file"
             },
             {
-                "label": "resume.json",
-                "location": "https://www.google.com",
+                "label": "home.json",
+                "location": "https://github.com/ryan-bauermeister/Portfolio/blob/master/Home/home.json",
                 "icon": "far fa-file"
             },
             {
                 "label": "common.css",
-                "location": "https://www.google.com",
+                "location": "https://github.com/ryan-bauermeister/Portfolio/blob/master/Common/common.css",
                 "icon": "far fa-file"
             },
             {
                 "label": "common.js",
-                "location": "https://www.google.com",
+                "location": "https://github.com/ryan-bauermeister/Portfolio/blob/master/Common/common.js",
+                "icon": "far fa-file"
+            },
+            {
+                "label": "common.js",
+                "location": "https://github.com/ryan-bauermeister/Portfolio/blob/master/Common/common.json",
                 "icon": "far fa-file"
             }
         ]
