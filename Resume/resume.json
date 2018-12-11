@@ -23,7 +23,8 @@
             "JavaScript",
             "jQuery",
             "CSS",
-            "Bootstrap"
+            "Bootstrap",
+            "JSON"
         ],
         "github": [
             {
@@ -70,7 +71,7 @@
         "phone": "919.500.****",
         "linkedin": "www.linkedin.com/in/rbauermeister",
         "email": "ryan.*.*********@gmail.com",
-        "introHeader1": "JAVASCRIPT DEVELOPMENT SPECIALIST",
+        "introHeader1": "FRONT END DEVELOPMENT SPECIALIST",
         "introHeader2": "ANALYTICAL | SOLUTIONS-ORIENTED | CUSTOMER-FOCUSED",
         "intro1": "IT professional with notable success developing comprehensive and innovative solutions that support business objectives and resolve critical organization needs in IT, manufacturing and government.  Optimize resources in a timely and cost-effective manner.",
         "intro2": "Adaptable to fast-paced, ever-changing priorities and work environments. Clearly communicate complex concepts to technical and non-technical audiences.",
@@ -134,7 +135,7 @@
                 "dates": "2016 to July 2018",
                 "title": "Consultant",
                 "location": "Reston, VA",
-                "about": "JavaScript Development Specialist with experience in design and development of sites and code fragments.  Working as a member of an award winning Agile Scrum team supporting an application developed for the government.  As a member of this Agile team I designed, developed, tested, and provided maintenance for a wide range of JavaScript and custom UI fragments.",
+                "about": "Front End Development Specialist with experience in design and development of sites and code fragments.  Working as a member of an award winning Agile Scrum team supporting an application developed for the government.  As a member of this Agile team I designed, developed, tested, and provided maintenance for a wide range of JavaScript and custom UI fragments.",
                 "examples": [
                     "Volunteered to create a graphing code fragment utilizing D3.js to provide pie and line graphs in addition to my scheduled project work.",
                     "Frequently made use of JavaScript to execute CRUD operations on SharePoint and MySQL data to support the needs of the application.",
