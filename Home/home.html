@@ -26,7 +26,7 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar"></nav>
+  <nav class="navbar navbar-expand-lg navbar-dark" id="navbar"></nav>
 
   <div class="container-fluid">
     <div class="row">
@@ -40,19 +40,24 @@
       </aside>
 
       <!-- Add page content -->
-      <section class="col-md-10" id="content">
+      <section class="col-md" id="content">
         <div class="row justify-content-between">
-          <article class="col-md-5">
-            <img src="images/goals.jpg">
+          <article class="col-md-4">
+            <div class="articleImage">
+              <img src="images/goals.jpg">
+              <div class="imageLabel">Site Goals</div>
+            </div>
             <p>This site is intended to show a verity of Front-End/UI skills that I have developed over the last five
               years. My goal for this site is demonstrate a verity of skills rather than going into great detail in one
               or two. This site was started in early December of 2018 and is a work in progress so a number of pages in
               the site will come up as coming soon pages. Thanks you for taking the time to check out my development
               skills.</p>
           </article>
-          <article class="col-md-5">
-            <img src="images/testing.jpg">
-
+          <article class="col-md-4">
+            <div class="articleImage">
+              <img src="images/testing.jpg">
+              <div class="imageLabel">Testing</div>
+            </div>
             <p>This site has had limited testing with desktop and tablet environments but is not designed to support
               mobile phones. The testing that has been done on this site should be sufficient to find most issue but
               due
@@ -62,7 +67,10 @@
         </div>
         <article>
           <!-- Table rows will be added by javascript -->
-          <img src="images/content.jpg">
+          <div class="articleImage">
+            <img src="images/content.jpg" id="tableImage">
+            <div class="imageLabel">Site Content</div>
+          </div>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
             </table>
