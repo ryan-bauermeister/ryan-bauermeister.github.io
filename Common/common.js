@@ -54,7 +54,7 @@ function addNavbar(target) {
         for (i = 0; l < menuData.icons.length; i++) {
             if (menuData.icons[i].url) {
                 //$('#' + target).append($('<a>', { class: "label no-underline hover-white", id: "navbarIcon" + i, href: menuData.icons[i].url, text: menuData.icons[i].label }));
-                $('#' + target).append($('<a>', { class: "label no-underline hover-white", id: "navbarIcon" + i, href: menuData.icons[i].url }));
+                $('#navIcons').append($('<a>', { class: "label no-underline hover-white", id: "navbarIcon" + i, href: menuData.icons[i].url }));
                 $("#navbarIcon" + i).append($('<span>', { class: "icon navbarIcon " + menuData.icons[i].icon }));
             }
         }
