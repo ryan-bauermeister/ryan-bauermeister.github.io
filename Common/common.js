@@ -51,7 +51,7 @@ function addNavbar(target) {
         }
 
         // Add navbar icons
-        for (i = 0; l < menuData.icons.length; i++) {
+        for (i = 0, l = menuData.icons.length; i < l; i++) {
             if (menuData.icons[i].url) {
                 //$('#' + target).append($('<a>', { class: "label no-underline hover-white", id: "navbarIcon" + i, href: menuData.icons[i].url, text: menuData.icons[i].label }));
                 $('#navIcons').append($('<a>', { class: "label no-underline hover-white", id: "navbarIcon" + i, href: menuData.icons[i].url }));
