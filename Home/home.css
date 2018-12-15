@@ -16,10 +16,6 @@ a {
     text-align: center;    
 }
 
-#content {
-    background-color: #f7f7f7; 
-}
-
 #content article {
     background-color: white;
     margin: 20px;   

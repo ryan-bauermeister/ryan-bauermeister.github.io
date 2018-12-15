@@ -20,8 +20,7 @@ function addNavbar(target) {
     // ********************************************************************************************
     function buildNavbar(target, menuData) {
 
-        //  Build navbar
-        $('#' + target).append('<a class="navbar-brand" href="#">' + menuData.title + '</a>');
+        //  Build navbar        
         $('#' + target).append('<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"></button>');
         $('#' + target + ' button').append('<span class="navbar-toggler-icon"></span>');
         $('#' + target).append('<div class="collapse navbar-collapse" id="navbarNavDropdown"></div>');
@@ -108,9 +107,12 @@ function addSidebar(target, sideBarData) {
         }
     }
 
+    // *** Brand/Name for the top of the sidebar ***
+    $('#' + target).append($('<p>', { text: sideBarData.title }));
+
     // *** Discription section of the sidebar ***
     addSegmentHeader(0);
-    $('#' + target).append($('<p>', { text: sideBarData.discription }));
+    $('#' + target).append($('<p class="brand">', { text: sideBarData.discription }));
     $('#' + target).append($('<div>', { class: "sidebar-divider" }));
 
     // *** Technologies section of the sidebar ***
