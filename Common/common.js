@@ -109,7 +109,7 @@ function addSidebar(target, sideBarData) {
     }
 
     // *** Brand/Name for the top of the sidebar ***
-    $('.' + target).append($('<p>', { class: "brand", text: sideBarData.title }));
+    $('#brand').append($('<p>', { text: sideBarData.title }));
 
     // *** Discription section of the sidebar ***
     addSegmentHeader(0);
