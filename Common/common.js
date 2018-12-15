@@ -108,11 +108,11 @@ function addSidebar(target, sideBarData) {
     }
 
     // *** Brand/Name for the top of the sidebar ***
-    $('#' + target).append($('<p>', { text: sideBarData.title }));
+    $('#' + target).append($('<p>', { class: "brand", text: sideBarData.title }));
 
     // *** Discription section of the sidebar ***
     addSegmentHeader(0);
-    $('#' + target).append($('<p class="brand">', { text: sideBarData.discription }));
+    $('#' + target).append($('<p>', { text: sideBarData.discription }));
     $('#' + target).append($('<div>', { class: "sidebar-divider" }));
 
     // *** Technologies section of the sidebar ***
