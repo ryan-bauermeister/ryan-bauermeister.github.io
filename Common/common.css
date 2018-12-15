@@ -110,8 +110,9 @@ body {
     padding-right: 23px;
 }
 
-#navIcons span {    
+#navIcons img {    
     border-radius: 50%;
+    padding: 3px;
 }
 
 /********************************************************

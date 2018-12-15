@@ -61,17 +61,17 @@
             {
                 "label": "Linkedin",
                 "url": "http://www.linkedin.com/in/rbauermeister",
-                "icon": "/linkedin.png"
+                "icon": "../Common/images/linkedin.png"
             },
             {
                 "label": "Github",
                 "url": "https://github.com/ryan-bauermeister/portfolio",
-                "icon": "/github.png"
+                "icon": "../Common/images/github.png"
             },
             {
                 "label": "E-mail",
                 "url": "mailto:ryan.k.bauermeister@gmail.com",
-                "icon": "/email.png"
+                "icon": "../Common/images/email.png"
             }
         ]
     }
