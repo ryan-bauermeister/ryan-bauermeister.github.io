@@ -127,13 +127,12 @@ window.onload = function () {
     // ************************************************************************************
     (function () {
         $.getJSON({
-            url: "resume.json"
+            url: "../Resume/resume.json"
         }).done(function (result) {
-            console.log("Sidebar and resume json successful imported.");
+            console.log("Resume json successful imported.");
             try {
-                buildResume(result.resumeData);
-                addSidebar("sidebar", result.sideBarData);
-                console.log("Resume page loaded.");
+                buildResume(result.resumeData);                
+                console.log("Resume 2 page loaded.");
             } catch (error) {
                 console.log("Error in building resume page -- " + error);
             }

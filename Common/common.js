@@ -49,20 +49,33 @@ function addNavbar(target) {
                 $('#navCol' + i).append($('<a>', { class: "nav-link", href: menuData.col[i].location, text: menuData.col[i].label }));
             }
         }
+
+        // Add navbar icons
+        for (i = 0; l < menuData.icons.length; i++) {
+            if (menuData.icons[i].url) {
+                //$('#' + target).append($('<a>', { class: "label no-underline hover-white", id: "navbarIcon" + i, href: menuData.icons[i].url, text: menuData.icons[i].label }));
+                $('#' + target).append($('<a>', { class: "label no-underline hover-white", id: "navbarIcon" + i, href: menuData.icons[i].url }));
+                $("#navbarIcon" + i).append($('<span>', { class: "icon navbarIcon " + menuData.icons[i].icon }));
+            }
+        }
     }
-        // ************************************************************************************
-        // function to pull JSON data and to add the navBar and menu data.
-        // ************************************************************************************
-        (function () {
-            $.getJSON({
-                url: "../Common/common.json"
-            }).done(function (result) {
+    // ************************************************************************************
+    // function to pull JSON data and to add the navBar and menu data.
+    // ************************************************************************************
+    (function () {
+        $.getJSON({
+            url: "../Common/common.json"
+        }).done(function (result) {
+            console.log("Menu json successful imported in.");
+            try {
                 buildNavbar(target, result.menuData);
-                console.log("Menu json successful imported in.");
-            }).fail(function (xhr, status, error) {
-                console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
-            });
-        }());
+            } catch (error) {
+                console.log("Error in building navbar -- " + error);
+            }
+        }).fail(function (xhr, status, error) {
+            console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+        });
+    }());
 }
 
 // ************************************************************************

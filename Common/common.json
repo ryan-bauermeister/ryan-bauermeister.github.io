@@ -1,48 +1,79 @@
-{"menuData": {
-    "title": "Ryan Bauermeister",
-    "col": [{
-        "label": "Home",
-        "location": "../Home/home.html"
-    },
-    {
-        "label": "Basic Site",
-        "options": [{
-            "label": "Resume",
-            "location": "../Resume/resume.html"
-        }, {
-            "label": "Menu Option 2",
-            "location": "../ComingSoon/comingSoon.html"
-        }, {
-            "label": "Menu Option 3",
-            "location": "../ComingSoon/comingSoon.html"
-        }]
-    },
-    {
-        "label": "Angular Site",
-        "options": [{
-            "label": "Option 1 - for future development",
-            "location": "../ComingSoon/comingSoon.html"
-        }, {
-            "label": "Option 2 - for future development",
-            "location": "../ComingSoon/comingSoon.html"
-        }, {
-            "label": "Option 3 - for future development",
-            "location": "../ComingSoon/comingSoon.html"
-        }]
-    },
-    {
-        "label": "React Site",
-        "options": [{
-            "label": "Option 1 - for future development",
-            "location": "../ComingSoon/comingSoon.html"
-        }, {
-            "label": "Option 2 - for future development",
-            "location": "../ComingSoon/comingSoon.html"
-        }, {
-            "label": "Option 3 - for future development",
-            "location": "../ComingSoon/comingSoon.html"
-        }]
+{
+    "menuData": {
+        "title": "Ryan Bauermeister",
+        "col": [
+            {
+                "label": "Home",
+                "location": "../Home/home.html"
+            },
+            {
+                "label": "Basic Site",
+                "options": [
+                    {
+                        "label": "Resume",
+                        "location": "../Resume/resume.html"
+                    },
+                    {
+                        "label": "Menu Option 2",
+                        "location": "../ComingSoon/comingSoon.html"
+                    },
+                    {
+                        "label": "Menu Option 3",
+                        "location": "../ComingSoon/comingSoon.html"
+                    }
+                ]
+            },
+            {
+                "label": "Angular Site",
+                "options": [
+                    {
+                        "label": "Option 1 - for future development",
+                        "location": "../ComingSoon/comingSoon.html"
+                    },
+                    {
+                        "label": "Option 2 - for future development",
+                        "location": "../ComingSoon/comingSoon.html"
+                    },
+                    {
+                        "label": "Option 3 - for future development",
+                        "location": "../ComingSoon/comingSoon.html"
+                    }
+                ]
+            },
+            {
+                "label": "React Site",
+                "options": [
+                    {
+                        "label": "Option 1 - for future development",
+                        "location": "../ComingSoon/comingSoon.html"
+                    },
+                    {
+                        "label": "Option 2 - for future development",
+                        "location": "../ComingSoon/comingSoon.html"
+                    },
+                    {
+                        "label": "Option 3 - for future development",
+                        "location": "../ComingSoon/comingSoon.html"
+                    }
+                ]
+            }
+        ],
+        "icons": [
+            {
+                "label": "Linkedin",
+                "url": "http://www.linkedin.com/in/rbauermeister",
+                "icon": "fab fa-linkedin"
+            },
+            {
+                "label": "Github",
+                "url": "https://github.com/ryan-bauermeister/portfolio",
+                "icon": "fab fa-github"
+            },
+            {
+                "label": "E-mail",
+                "url": "mailto:ryan.k.bauermeister@gmail.com",
+                "icon": "fas fa-envelope-square"
+            }
+        ]
     }
-    ]
-}
 }

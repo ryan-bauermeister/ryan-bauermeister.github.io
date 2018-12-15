@@ -1,0 +1,79 @@
+#content {
+    font-size: 12px;
+    font-weight: 500;    
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.name {
+    margin-right: 0;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom-width: thick;
+    border-bottom-style: double;
+}
+
+.address {
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 0;
+}
+
+.phone {
+    font-size: 12px;
+    font-weight: 700;
+    padding-right: 0;
+}
+
+.linkedin {
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 0;
+}
+
+.email {
+    font-size: 12px;
+    font-weight: 500;
+    padding-right: 0;
+}
+
+.about p {
+    margin-bottom: 10px;
+}
+
+#aboutHeader2 {
+    padding-top: 0;
+}
+
+.col-sm,
+.col-sm-4 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.sHeader {
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.subHeader {
+    padding-top: 10px;
+}
+
+.expAbout {
+    padding-top: 10px;
+}
+
+li {
+    padding-top: 5px;
+}

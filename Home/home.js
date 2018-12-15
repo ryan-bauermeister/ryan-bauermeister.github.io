@@ -33,9 +33,14 @@ window.onload = function () {
         $.getJSON({
             url: "home.json"
         }).done(function (result) {
-            addtable("table", result.tableData);
-            addSidebar("sidebar", result.sideBarData);
             console.log("Sidebar and home json successful imported.");
+            try {
+                addtable("table", result.tableData);
+                addSidebar("sidebar", result.sideBarData);
+                console.log("Home page loaded.");
+            } catch (error) {
+                console.log("Error in building sidebar or home page -- " + error);
+            }
         }).fail(function (xhr, status, error) {
             console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
         });

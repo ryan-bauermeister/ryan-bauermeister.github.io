@@ -6,6 +6,16 @@ a {
     color: black;
 }
 
+.col-md-4 {
+    padding-right: 0; 
+    padding-left: 0; 
+}
+
+.articleImage{
+    position: relative;
+    text-align: center;    
+}
+
 #content {
     background-color: #f7f7f7; 
 }
@@ -31,16 +41,6 @@ a {
     width: 100%;
     background-color: white;
     padding: 10px;
-}
-
-.col-md-4 {
-    padding-right: 0; 
-    padding-left: 0; 
-}
-
-.articleImage{
-    position: relative;
-    text-align: center;    
 }
 
 #content article #tableImage{
