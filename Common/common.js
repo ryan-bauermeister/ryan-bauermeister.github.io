@@ -54,7 +54,8 @@ function addNavbar(target) {
             if (menuData.icons[i].url) {
                 //$('#' + target).append($('<a>', { class: "label no-underline hover-white", id: "navbarIcon" + i, href: menuData.icons[i].url, text: menuData.icons[i].label }));
                 $('#navIcons').append($('<a>', { class: "label no-underline hover-white", id: "navbarIcon" + i, href: menuData.icons[i].url }));
-                $("#navbarIcon" + i).append($('<span>', { class: "icon navbarIcon " + menuData.icons[i].icon }));
+                //$("#navbarIcon" + i).append($('<span>', { class: "icon navbarIcon " + menuData.icons[i].icon }));
+                $("#navbarIcon" + i).append($('<img>', { src: menuData.icons[i].icon }));
             }
         }
     }
@@ -108,7 +109,7 @@ function addSidebar(target, sideBarData) {
     }
 
     // *** Brand/Name for the top of the sidebar ***
-    $('#' + target).append($('<p>', { class: "brand", text: sideBarData.title }));
+    $('.' + target).append($('<p>', { class: "brand", text: sideBarData.title }));
 
     // *** Discription section of the sidebar ***
     addSegmentHeader(0);
