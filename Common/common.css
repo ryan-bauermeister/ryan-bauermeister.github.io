@@ -98,17 +98,23 @@ body {
 /********************************************************
      Navbar styles 
 *********************************************************/
+#navbarRow {
+    padding-right: 12%;
+}
 
 .navbar {
     padding: 0;
 }  
 
 .nav-item {
-    color: #417799;
     font-size: 18px;
     font-weight: 500;
     padding-left: 23px;
     padding-right: 23px;
+}
+
+.nav-item a {
+    color: #417799;
 }
 
 #navIcons img {    

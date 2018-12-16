@@ -17,6 +17,12 @@ p {
     border-bottom-style: double;
 }
 
+#brand img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
 .address {
     font-size: 12px;
     font-weight: 500;
