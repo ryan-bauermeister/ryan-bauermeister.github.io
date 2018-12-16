@@ -121,6 +121,19 @@ function buildResume(resumeData) {
     $('#education').append($('<span>', { text: resumeData.universityLocation }));
 }
 
+// ********************************************************************************************
+// function to add resume aside 
+// 
+// ********************************************************************************************
+function buildAside() {
+
+        // *** Brand/Name for the top of the sidebar ***
+        $('#brand').append($('<p>', { text: "Ryan Bauermeister" }));
+
+        $("#brand").append($('<img>', { src: "Ryan.png", height: "42", width: "42" }));
+
+}
+
 window.onload = function () {
     // ************************************************************************************
     // function to pull JSON data and to add the sidebar and resume data.
@@ -131,7 +144,8 @@ window.onload = function () {
         }).done(function (result) {
             console.log("Resume json successful imported.");
             try {
-                buildResume(result.resumeData);                
+                buildResume(result.resumeData);    
+                buildAside();            
                 console.log("Resume 2 page loaded.");
             } catch (error) {
                 console.log("Error in building resume page -- " + error);
