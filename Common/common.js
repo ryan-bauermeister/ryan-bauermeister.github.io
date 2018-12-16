@@ -109,7 +109,7 @@ function addSidebar(target, sideBarData) {
     }
 
     // *** Brand/Name for the top of the sidebar ***
-    $('#brand').append($('<p>', { text: sideBarData.title }));
+    $('#brand').append($('<span>', { text: sideBarData.title }));
 
     // *** Discription section of the sidebar ***
     addSegmentHeader(0);
@@ -120,8 +120,9 @@ function addSidebar(target, sideBarData) {
     addSegmentHeader(1);
 
     //  Add technologies list
+    $('#' + target).append($('<ul>', { id: "techList" }));
     for (i = 0, l = sideBarData.technologies.length; i < l; i++) {
-        $('#' + target).append($('<li>', { class: "tech", text: sideBarData.technologies[i] }));
+        $('#techList').append($('<li>', { text: sideBarData.technologies[i] }));
     }
     $('#' + target).append($('<div>', { class: "sidebar-divider" }));
 
@@ -129,9 +130,10 @@ function addSidebar(target, sideBarData) {
     addSegmentHeader(2);
 
     //  Add Github file list
+    $('#' + target).append($('<ul>', { id: "githubList" }));
     for (i = 0, l = sideBarData.github.length; i < l; i++) {
-        $('#' + target).append($('<li>', { id: target + i }));
-        $('#' + target + i).append($('<a>', { href: sideBarData.github[i].location, text: sideBarData.github[i].label }));
-        $('#' + target + i + ' a').append($('<span>', { class: "icon " + sideBarData.github[i].icon }));
+        $('#githubList').append($('<li>', { id: "githubListItem" + i }));
+        $('#githubListItem' + i).append($('<a>', { href: sideBarData.github[i].location, text: sideBarData.github[i].label }));
+        $('#githubListItem' + i + ' a').append($('<span>', { class: "icon " + sideBarData.github[i].icon }));
     }
 }

@@ -12,20 +12,15 @@ body {
     margin-bottom: 0;
 }
 
-#sidebar li {
-    padding-top: 7px;
-    padding-left: 30px; 
-}
-
 #sidebar a {
-    color: #333;
+    color: white;
 }
 
 .sidebar {
     background-color: #8cb3cc9c;
     font-size: 14px;
     line-height: 20px;
-    color: #333;
+    color: white;
     overflow-y: auto;
     max-width: 235px;
     min-width: 235px;
@@ -34,18 +29,17 @@ body {
     border-right-color: #e3ebf6;
     border-right-width: 2px;
 }
-
+/*
 .sidebar .nav-link {
     font-size: 14px;
     line-height: 20px;
     color: #333;
 }
-
+*/
 .sidebar .label {
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
-    color: #333;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -61,10 +55,15 @@ body {
     font-weight: 700;
 }
 
-#sidebar .tech {
+#techList ul {
     list-style-type: circle;
     margin-left: 50px;
     padding-left: 0;
+}
+
+#githubList li {
+    padding-top: 7px;
+    padding-left: 30px; 
 }
 
 .icon {
