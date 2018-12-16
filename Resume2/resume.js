@@ -130,7 +130,7 @@ function buildAside() {
         // *** Brand/Name for the top of the sidebar ***
         $('#brand').append($('<p>', { text: "Ryan Bauermeister" }));
 
-        $("#brand").append($('<img>', { src: "Ryan.png", height: "42", width: "42" }));
+        $("#brand").append($('<img>', { src: "Ryan.png", height: "90", width: "90" }));
 
 }
 
