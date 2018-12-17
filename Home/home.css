@@ -14,7 +14,8 @@ body, html {
 
 #content article {
     background-color: white;
-    margin: 20px;   
+    margin-top: 20px;
+    margin-bottom: 20px; 
 }
 
 #content article img {

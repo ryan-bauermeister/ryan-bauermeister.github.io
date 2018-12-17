@@ -2,7 +2,7 @@
      Body styles 
 *********************************************************/
 body {
-    background-color: #f7f7f7;
+    background-color: #8cb3cc26;
 }
 
 /********************************************************
@@ -47,7 +47,7 @@ body {
 
 #techList li {
     list-style: disc; 
-    margin-left: 50px;
+    margin-left: 17px;
     padding-left: 0;
 }
 
@@ -104,6 +104,10 @@ body {
 
 .nav-item a {
     color: #417799;
+}
+
+#navIcons {
+    padding: 0;
 }
 
 #navIcons img {    
