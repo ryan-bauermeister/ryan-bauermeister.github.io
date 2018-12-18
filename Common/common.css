@@ -145,3 +145,7 @@ body {
 .container-fluid {
     padding: 0;
 }
+
+.container-fluid .row {
+    height: 100%;
+}
