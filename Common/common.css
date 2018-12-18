@@ -146,6 +146,6 @@ body {
     padding: 0;
 }
 
-.container-fluid .row {
+.fullheight {
     height: 100%;
 }
