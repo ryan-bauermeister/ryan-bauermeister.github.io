@@ -14,7 +14,7 @@ app.controller('portfolio3Ctrl', function ($scope, $http) {
 
 
 
-
+/*
 
 // set the dimensions of the canvas
 var margin = {top: 20, right: 20, bottom: 70, left: 40},
@@ -95,3 +95,4 @@ d3.json("angularJS_D3.json", function(error, data) {
       .attr("height", function(d) { return height - y(d.Freq); });
 
 });
+*/
