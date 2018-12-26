@@ -1,5 +1,5 @@
 
-var data = [{ "Name": "Chop-suey Chinese", "Country": "Germany", "Count": 1001 },
+var tData = [{ "Name": "Chop-suey Chinese", "Country": "Germany", "Count": 1001 },
 { "Name": "B's Beverages", "Country": "UK", "Count": 2001 },
 { "Name": "Sue's Fine Foods", "Country": "Sweden", "Count": 511 },
 { "Name": "Mike's Chinese", "Country": "Canada", "Count": 3001 },
@@ -8,7 +8,7 @@ var data = [{ "Name": "Chop-suey Chinese", "Country": "Germany", "Count": 1001 }
 var app = angular.module('portfolio3', []);
 
 app.controller('portfolio3Ctrl', function ($scope, $http) {
-    $scope.names = data;
+    $scope.names = tData;
 
 });
 
