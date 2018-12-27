@@ -8,7 +8,15 @@ var tData = [{ "Name": "Chop-suey Chinese", "Country": "Germany", "Count": 1001 
 var app = angular.module('portfolio3', []);
 
 app.controller('portfolio3Ctrl', function ($scope, $http) {
-    $scope.names = tData;
+        // load the data
+        d3.json("angularJS_D3.json", function(error, data) {
+
+            data.forEach(function(d) {
+                d.Letter = d.Letter;
+                d.Freq = +d.Freq;
+            });
+            
+    $scope.names = data;
 
 
     // set the dimensions of the canvas
@@ -35,21 +43,13 @@ app.controller('portfolio3Ctrl', function ($scope, $http) {
 
 
     // add the SVG element
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#chart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", 
         "translate(" + margin.left + "," + margin.top + ")");
 
-
-    // load the data
-    d3.json("angularJS_D3.json", function(error, data) {
-
-    data.forEach(function(d) {
-        d.Letter = d.Letter;
-        d.Freq = +d.Freq;
-    });
 
     // scale the range of the data
     x.domain(data.map(function(d) { return d.Letter; }));
