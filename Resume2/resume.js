@@ -127,32 +127,34 @@ function buildResume(resumeData) {
 // ********************************************************************************************
 function buildAside() {
 
-        // *** Brand/Name for the top of the sidebar ***
-        $('#brand').append($('<p>', { text: "Ryan Bauermeister" }));
+    // *** Brand/Name for the top of the sidebar ***
+    $('#brand').append($('<p>', { text: "Ryan Bauermeister" }));
 
-        $("#brand").append($('<img>', { src: "Ryan.png", height: "90", width: "90" }));
+    $("#brand").append($('<img>', { src: "Ryan.png", height: "90", width: "90" }));
 
 }
 
+
+// ************************************************************************************
+// function to pull JSON data and to add the sidebar and resume data.
+// ************************************************************************************
+(function () {
+    $.getJSON({
+        url: "../Resume/resume.json"
+    }).done(function (result) {
+        console.log("Resume json successful imported.");
+        try {
+            buildResume(result.resumeData);
+            buildAside();
+            console.log("Resume 2 page loaded.");
+        } catch (error) {
+            console.log("Error in building resume page -- " + error);
+        }
+    }).fail(function (xhr, status, error) {
+        console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+    });
+}());
+
 window.onload = function () {
-    // ************************************************************************************
-    // function to pull JSON data and to add the sidebar and resume data.
-    // ************************************************************************************
-    (function () {
-        $.getJSON({
-            url: "../Resume/resume.json"
-        }).done(function (result) {
-            console.log("Resume json successful imported.");
-            try {
-                buildResume(result.resumeData);    
-                buildAside();            
-                console.log("Resume 2 page loaded.");
-            } catch (error) {
-                console.log("Error in building resume page -- " + error);
-            }
-        }).fail(function (xhr, status, error) {
-            console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
-        });
-    }());
     addNavbar("navbar");
 }

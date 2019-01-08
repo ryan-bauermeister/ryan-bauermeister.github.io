@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- JS Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <!-- CSS Libraries-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+  <!-- Custom Script -->
+  <script src="../Common/common.js"></script>
+  <script src="urbanAreas.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../Common/common.css">
+  <link rel="stylesheet" href="urbanAreas.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row fullheight">
+
+      <!-- Sidebar -->
+      <aside class="col-md-2 d-none d-md-block sidebar">
+        <div id="brand">Ryan Bauermeister
+        </div>
+        <p>This page allows you to access a verity of information on urban areas in North America.</p>
+        <p class="label">Select an Urban Area</p>
+        <div id="urbanAreasOptions"></div>
+      </aside>
+
+      <div class="col-md">
+        <!-- Navbar -->
+        <div id="navbarRow" class="row">
+          <nav class="col-md navbar navbar-expand-lg" id="navbar"></nav>
+          <div id="navIcons" class="col-md-2"> </div>
+        </div>
+
+        <!-- Add page content -->
+        <section class="content row hidden">
+          <div id="urbanAreaImage" class="col-md-12"></div>
+          <div class="col-md-6">
+            <article id="urbanAreaCities" class="leftContent"></article>
+            <article id="urbanAreaScores" class="leftContent"></article>
+            <article id="urbanAreaSalaries" class="leftContent"></article>
+          </div>
+          <div class="col-md-6">
+            <div id="urbanAreasDetails"></div>
+          </div>
+        </section>
+
+        <!-- On load greeting message-->
+        <section id="greeting" class="content row">
+          <p>On load greeting</p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

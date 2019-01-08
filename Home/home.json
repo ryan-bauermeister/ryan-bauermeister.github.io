@@ -68,7 +68,8 @@
         "header": [
             "Pages/Link",
             "Discription",
-            "Technologies Used"
+            "Technologies Used",
+            "Status"
         ],
         "pages": [
             {
@@ -76,56 +77,64 @@
                 "discription": "Introduction",
                 "skills": "HTML, CSS, JavaScript, jQuery",
                 "level": "Basic",
-                "url": "../Home/home.html"
+                "url": "../Home/home.html",
+                "status": "Prototype Complete"
             },
             {
                 "name": "Resume",
                 "discription": "My Resume",
                 "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery",
                 "level": "Basic",
-                "url": "../Resume/resume.html"
+                "url": "../Resume/resume.html",
+                "status": "Prototype Complete"
             },
             {
-                "name": "External Data Pull",
+                "name": "Urban Area Information",
                 "discription": "Getting and Displaying Data",
                 "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery",
                 "level": "Basic",
-                "url": "../ComingSoon/comingSoon.html"
+                "url": "../UrbanAreas/urbanAreas.html",
+                "status": "Prototype Complete"
             },
             {
                 "name": "Angular Graph",
-                "discription": "Angular Graph",
+                "discription": "Angular.js and D3 Graph",
                 "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, Angular, D3",
                 "level": "Basic",
-                "url": "../ComingSoon/comingSoon.html"
+                "url": "../ComingSoon/comingSoon.html",
+                "status": "Development"
             },
             {
                 "name": "More Angular",
                 "discription": "Angular",
                 "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, Angular",
                 "level": "Basic",
-                "url": "../ComingSoon/comingSoon.html"
+                "url": "../ComingSoon/comingSoon.html",
+                "status": "Pending"
             },
             {
                 "name": "More Angular part 2",
                 "discription": "Angular",
                 "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, Angular",
                 "level": "Basic",
-                "url": "../ComingSoon/comingSoon.html"
+                "url": "../ComingSoon/comingSoon.html",
+                "status": "Pending"
             },
             {
                 "name": "React",
                 "discription": "React",
                 "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, React",
                 "level": "Basic",
-                "url": "../ComingSoon/comingSoon.html"
+                "url": "../ComingSoon/comingSoon.html",
+                "status": "Pending"
             },
             {
                 "name": "More React",
                 "discription": "More React",
                 "skills": "HTML, CSS, Bootstrap, JavaScript, jQuery, React",
                 "level": "Basic",
-                "url": "../ComingSoon/comingSoon.html"
+                "url": "../ComingSoon/comingSoon.html",
+                "status": "Pending"
             }
         ]
     }

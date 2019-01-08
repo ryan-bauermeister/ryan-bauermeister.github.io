@@ -22,30 +22,30 @@ function addtable(target, tableData) {
         $('#tr' + i + ' td').append($('<a>', { href: tableData.pages[i].url, text: tableData.pages[i].name }));
         $('#tr' + i).append($('<td>', { text: tableData.pages[i].discription }));
         $('#tr' + i).append($('<td>', { text: tableData.pages[i].skills }));
+        $('#tr' + i).append($('<td>', { text: tableData.pages[i].status }));
     }
 }
 
-window.onload = function () {
-    // ************************************************************************************
-    // function to pull JSON data and to add the sidebar and home screen table data.
-    // ************************************************************************************
-    (function () {
-        $.getJSON({
-            url: "home.json"
-        }).done(function (result) {
-            console.log("Sidebar and home json successful imported.");
-            try {
-                addtable("table", result.tableData);
-                addSidebar("sidebar", result.sideBarData);
-                console.log("Home page loaded.");
-            } catch (error) {
-                console.log("Error in building sidebar or home page -- " + error);
-            }
-        }).fail(function (xhr, status, error) {
-            console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
-        });
-    }());
+// ************************************************************************************
+// function to pull JSON data and to add the sidebar and home screen table data.
+// ************************************************************************************
+(function () {
+    $.getJSON({
+        url: "home.json"
+    }).done(function (result) {
+        console.log("Sidebar and home json successful imported.");
+        try {
+            addtable("table", result.tableData);
+            addSidebar("sidebar", result.sideBarData);
+            console.log("Home page loaded.");
+        } catch (error) {
+            console.log("Error in building sidebar or home page -- " + error);
+        }
+    }).fail(function (xhr, status, error) {
+        console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+    });
+}());
 
-    addNavbar("navbar");
-}
+addNavbar("navbar");
+
 

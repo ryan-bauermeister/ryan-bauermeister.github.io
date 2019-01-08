@@ -121,25 +121,24 @@ function buildResume(resumeData) {
     $('#education').append($('<span>', { text: resumeData.universityLocation }));
 }
 
-window.onload = function () {
-    // ************************************************************************************
-    // function to pull JSON data and to add the sidebar and resume data.
-    // ************************************************************************************
-    (function () {
-        $.getJSON({
-            url: "resume.json"
-        }).done(function (result) {
-            console.log("Sidebar and resume json successful imported.");
-            try {
-                buildResume(result.resumeData);
-                addSidebar("sidebar", result.sideBarData);
-                console.log("Resume page loaded.");
-            } catch (error) {
-                console.log("Error in building resume page -- " + error);
-            }
-        }).fail(function (xhr, status, error) {
-            console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
-        });
-    }());
-    addNavbar("navbar");
-}
+
+// ************************************************************************************
+// function to pull JSON data and to add the sidebar and resume data.
+// ************************************************************************************
+(function () {
+    $.getJSON({
+        url: "resume.json"
+    }).done(function (result) {
+        console.log("Sidebar and resume json successful imported.");
+        try {
+            buildResume(result.resumeData);
+            addSidebar("sidebar", result.sideBarData);
+            console.log("Resume page loaded.");
+        } catch (error) {
+            console.log("Error in building resume page -- " + error);
+        }
+    }).fail(function (xhr, status, error) {
+        console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+    });
+}());
+addNavbar("navbar");
