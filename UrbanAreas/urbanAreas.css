@@ -40,5 +40,10 @@ article {
 }
 
 .hidden {
-   display: none;
+   /*display: none;*/
+   visibility: hidden;
+}
+
+#greeting {
+  font-size: 25px;
 }

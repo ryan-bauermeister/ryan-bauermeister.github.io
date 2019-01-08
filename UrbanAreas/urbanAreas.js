@@ -207,6 +207,6 @@ window.onload = function () {
     var urbanAreasUrl = "https://api.teleport.org/api/continents/geonames%3ANA/urban_areas/";
     getData(topic, urbanAreasUrl, addUrbanAreasList);
 
-    // addNavbar("navbar");
+    addNavbar("navbar");
 }
 
