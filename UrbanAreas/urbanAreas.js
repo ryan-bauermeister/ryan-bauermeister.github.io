@@ -24,9 +24,6 @@ function addUrbanAreasList(data) {
 
         $('#urbanAreasOptions').change(function () {
 
-            $("section.hidden").removeClass("hidden");
-            $("#greeting").addClass("hidden");
-
             var ua = $('#urbanAreasOptions option:selected').val();
             var topic = "urban area details";
             var uaDetailsUrl = uaList[ua].href;
@@ -65,6 +62,10 @@ function urbanArea(data) {
     var topic = "urban area scores";
     var uaDetailsUrl = data._links["ua:scores"].href;
     getData(topic, uaDetailsUrl, urbanAreaScores);
+
+    // To Do: need to add condition here
+    $("section.hidden").removeClass("hidden");
+    $("#greeting").addClass("hidden");
 }
 
 function urbanAreaCities(data) {
