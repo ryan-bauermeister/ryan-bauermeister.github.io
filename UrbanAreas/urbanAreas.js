@@ -8,11 +8,10 @@ const formatter = new Intl.NumberFormat('en-US', {
 })
 
 // ********************************************************************************************
-// function to add home screen table content.
-// - target (this parameter should provide the target for the experience section)
-// - tableData (this parameter should provide data object for all the home screen table data)
+// function to .
+// - 
+// - 
 // ********************************************************************************************
-
 function addUrbanAreasList(data) {
     var uaList = data._links["ua:items"];
 
@@ -36,6 +35,11 @@ function addUrbanAreasList(data) {
     }
 }
 
+// ********************************************************************************************
+// function to .
+// - 
+// - 
+// ********************************************************************************************
 function urbanArea(data) {
     urbanAreaName = data.full_name;
 
@@ -68,6 +72,11 @@ function urbanArea(data) {
     $("#greeting").addClass("hidden");
 }
 
+// ********************************************************************************************
+// function to .
+// - 
+// - 
+// ********************************************************************************************
 function urbanAreaCities(data) {
     $('#urbanAreaCities').empty();
     $('#urbanAreaCities').append($('<h4>', { text: "Cities of the " + urbanAreaName + " urban area." }));
@@ -79,11 +88,21 @@ function urbanAreaCities(data) {
     $('#urbanAreaCities').append($('<p>', { text: cityList.join(", ") }));
 }
 
+// ********************************************************************************************
+// function to .
+// - 
+// - 
+// ********************************************************************************************
 function urbanAreaDetails(data) {
     console.log(data.categories);
 
     $('#urbanAreasDetails').empty();
 
+    // ********************************************************************************************
+    // function to create a table row.
+    // - 
+    // - 
+    // ********************************************************************************************
     function detailRow(tableID, row, rowLabel, rowValue) {
 
         $('#' + tableID + ' tbody').append($('<tr>', { id: tableID + 'Row' + row }));
@@ -91,11 +110,15 @@ function urbanAreaDetails(data) {
         $('#' + tableID + 'Row' + row).append($('<td>', { text: rowValue }));
     }
 
+    // Loops through data categories and sets up table passing relevent data to detail Row function.
     for (i = 0, l = data.categories.length; i < l; i++) {
         var tableID = data.categories[i].id;
 
+        // Setup article for a given category
         $('#urbanAreasDetails').append($('<article>', { id: "urbanAreasDetails" + i, class: "rightContent" }));
         $('#urbanAreasDetails' + i).append($('<h4>', { text: data.categories[i].label }));
+
+        // Setup table for a given category
         $('#urbanAreasDetails' + i).append($('<table>', { id: tableID, class: "table table-sm" }));
         $('#' + tableID).append($('<thead>'));
         $('#' + tableID + ' thead').append($('<tr>'));
@@ -103,12 +126,14 @@ function urbanAreaDetails(data) {
         $('#' + tableID + ' thead tr').append($('<th>', { text: "Value", class: "detailValue" }));
         $('#' + tableID).append($('<tbody>'));
 
+        // Gathers data for table rows
         for (r = 0, l = data.categories[i].data.length; r < l; r++) {
             try {
                 var rowLabel = data.categories[i].data[r].label;
                 var valueType = data.categories[i].data[r].type;
                 var formatedValue;
 
+                //Determines which value to look for based on value type.
                 switch (valueType) {
                     case 'float':
                         if (!isNaN(data.categories[i].data[r].float_value)) {
@@ -142,11 +167,21 @@ function urbanAreaDetails(data) {
     }
 }
 
+// ********************************************************************************************
+// function to .
+// - 
+// - 
+// ********************************************************************************************
 function urbanAreaImages(data) {
     $('#urbanAreaImage').empty();
     $('#urbanAreaImage').append($('<img>', { src: data.photos[0].image.web, alt: "City Image" }));
 }
 
+// ********************************************************************************************
+// function to .
+// - 
+// - 
+// ********************************************************************************************
 function urbanAreaSalaries(data) {
     $('#urbanAreaSalaries').empty();
     $('#urbanAreaSalaries').append($('<h4>', { text: "Salaries" }));
@@ -169,6 +204,11 @@ function urbanAreaSalaries(data) {
     }
 }
 
+// ********************************************************************************************
+// function to .
+// - 
+// - 
+// ********************************************************************************************
 function urbanAreaScores(data) {
     $('#urbanAreaScores').empty();
     $('#urbanAreaScores').append($('<h4>', { text: "Scores" }));
@@ -187,6 +227,11 @@ function urbanAreaScores(data) {
     }
 }
 
+// ********************************************************************************************
+// function to .
+// - 
+// - 
+// ********************************************************************************************
 function getData(topic, url, callback) {
     $.getJSON({
         url: url
