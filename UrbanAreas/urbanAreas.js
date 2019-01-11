@@ -1,6 +1,6 @@
-// To-do:  Add error handling
 var urbanAreaName;
 
+//Provides formatting for currency values.
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -8,38 +8,36 @@ const formatter = new Intl.NumberFormat('en-US', {
 })
 
 // ********************************************************************************************
-// function to .
-// - 
-// - 
+// function to function to push out a list of urban areas to the UI.
+// - data (this parameter should provide the function with a dataset containing urban areas names)
 // ********************************************************************************************
 function addUrbanAreasList(data) {
     var uaList = data._links["ua:items"];
 
     if (uaList.length > 0) {
         $('#urbanAreasOptions').append($('<select>', { id: "uaList", size: 20 }));
+        
+        //Creates a list of name of urban areas.
         for (i = 0, l = uaList.length; i < l; i++) {
             $('#uaList').append($('<option>', { text: uaList[i].name, value: i }));
         }
 
+        //On change of urban area update all of the details with new urban area information.
         $('#urbanAreasOptions').change(function () {
-
             var ua = $('#urbanAreasOptions option:selected').val();
             var topic = "urban area details";
             var uaDetailsUrl = uaList[ua].href;
             getData(topic, uaDetailsUrl, urbanArea);
-
-
         })
     } else {
         console.log("Error - Urban Areas List not found");
     }
 }
 
-// ********************************************************************************************
-// function to .
-// - 
-// - 
-// ********************************************************************************************
+// ********************************************************************************************************
+// function to build information content for a given urban area.
+// - data (this parameter should provide the function with a dataset that contains this urban area's info.)
+// ********************************************************************************************************
 function urbanArea(data) {
     urbanAreaName = data.full_name;
 
@@ -72,16 +70,17 @@ function urbanArea(data) {
     $("#greeting").addClass("hidden");
 }
 
-// ********************************************************************************************
-// function to .
-// - 
-// - 
-// ********************************************************************************************
+// ********************************************************************************************************
+// function to provides a list of cities in a given urban area.
+// - data (this parameter should provide the function with a dataset that contains a list of cities).
+// ********************************************************************************************************
 function urbanAreaCities(data) {
     $('#urbanAreaCities').empty();
     $('#urbanAreaCities').append($('<h4>', { text: "Cities of the " + urbanAreaName + " urban area." }));
 
     var cityList = [];
+
+    //Populate values to the cityList.
     for (i = 0, l = data._links["city:items"].length; i < l; i++) {
         cityList.push(data._links["city:items"][i].name);
     }
@@ -89,9 +88,8 @@ function urbanAreaCities(data) {
 }
 
 // ********************************************************************************************
-// function to .
-// - 
-// - 
+// function to provides a number of detail categoies in a given urban area.
+// - data (this parameter should provide the function with a dataset that contains the details).
 // ********************************************************************************************
 function urbanAreaDetails(data) {
     console.log(data.categories);
@@ -100,11 +98,12 @@ function urbanAreaDetails(data) {
 
     // ********************************************************************************************
     // function to create a table row.
-    // - 
-    // - 
+    // - tableID - Provides a unique table id for the current category.
+    // - row - Is the number of the current row.
+    // - rowLabel - is the text label for the row.
+    // - rowValue - is a text value for the result for a given row.
     // ********************************************************************************************
     function detailRow(tableID, row, rowLabel, rowValue) {
-
         $('#' + tableID + ' tbody').append($('<tr>', { id: tableID + 'Row' + row }));
         $('#' + tableID + 'Row' + row).append($('<td>', { text: rowLabel }));
         $('#' + tableID + 'Row' + row).append($('<td>', { text: rowValue }));
@@ -159,6 +158,7 @@ function urbanAreaDetails(data) {
                         break;
                 }
 
+                //Build the current row.
                 detailRow(tableID, r, rowLabel, formatedValue, valueType);
             } catch (e) {
                 console.log("Error in urban area details - " + valueType)
@@ -168,9 +168,8 @@ function urbanAreaDetails(data) {
 }
 
 // ********************************************************************************************
-// function to .
-// - 
-// - 
+// function to find the image for a given urban area.
+// - data - dataset containing the image. 
 // ********************************************************************************************
 function urbanAreaImages(data) {
     $('#urbanAreaImage').empty();
@@ -178,14 +177,14 @@ function urbanAreaImages(data) {
 }
 
 // ********************************************************************************************
-// function to .
-// - 
-// - 
+// function to create salaries table.
+// - data - contains dataset with all off the salary information.
 // ********************************************************************************************
 function urbanAreaSalaries(data) {
     $('#urbanAreaSalaries').empty();
     $('#urbanAreaSalaries').append($('<h4>', { text: "Salaries" }));
 
+    //Add table and table header.
     $('#urbanAreaSalaries').append($('<table>', { class: "table table-sm" }));
     $('#urbanAreaSalaries table').append($('<thead>'));
     $('#urbanAreaSalaries table thead').append($('<tr>'));
@@ -195,6 +194,7 @@ function urbanAreaSalaries(data) {
     $('#urbanAreaSalaries table thead tr').append($('<th>', { text: "75 Percentile", class: "salary" }));
     $('#urbanAreaSalaries table').append($('<tbody>'));
 
+    //Add detail rows.
     for (i = 0, l = data.salaries.length; i < l; i++) {
         $('#urbanAreaSalaries table tbody').append($('<tr>', { id: 'salaryRow' + i }));
         $('#salaryRow' + i).append($('<td>', { text: data.salaries[i].job.title }));
@@ -205,14 +205,14 @@ function urbanAreaSalaries(data) {
 }
 
 // ********************************************************************************************
-// function to .
-// - 
-// - 
+// function to build table with ratings information for a given urban area.
+// - data - is a dataset containing all of the rates information.
 // ********************************************************************************************
 function urbanAreaScores(data) {
     $('#urbanAreaScores').empty();
     $('#urbanAreaScores').append($('<h4>', { text: "Scores" }));
 
+    //Add table and table header.
     $('#urbanAreaScores').append($('<table>', { class: "table table-sm" }));
     $('#urbanAreaScores table').append($('<thead>'));
     $('#urbanAreaScores table thead').append($('<tr>'));
@@ -220,6 +220,7 @@ function urbanAreaScores(data) {
     $('#urbanAreaScores table thead tr').append($('<th>', { text: "Score from 1 to 10", class: "score" }));
     $('#urbanAreaScores table').append($('<tbody>'));
 
+    //Add detail rows.
     for (i = 0, l = data.categories.length; i < l; i++) {
         $('#urbanAreaScores table tbody').append($('<tr>', { id: 'scoreRow' + i }));
         $('#scoreRow' + i).append($('<td>', { text: data.categories[i].name }));
@@ -228,9 +229,10 @@ function urbanAreaScores(data) {
 }
 
 // ********************************************************************************************
-// function to .
-// - 
-// - 
+// function to retrieve data based on topic.
+// - topic - description of information being retrieved.
+// - url - is the url for the api with given information.
+// - callback - provides the correct callback for a given topic.
 // ********************************************************************************************
 function getData(topic, url, callback) {
     $.getJSON({
