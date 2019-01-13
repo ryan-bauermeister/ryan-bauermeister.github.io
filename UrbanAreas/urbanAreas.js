@@ -16,7 +16,7 @@ function addUrbanAreasList(data) {
 
     if (uaList.length > 0) {
         $('#urbanAreasOptions').append($('<select>', { id: "uaList", size: 20 }));
-        
+
         //Creates a list of name of urban areas.
         for (i = 0, l = uaList.length; i < l; i++) {
             $('#uaList').append($('<option>', { text: uaList[i].name, value: i }));
@@ -104,9 +104,9 @@ function urbanAreaDetails(data) {
     // - rowValue - is a text value for the result for a given row.
     // ********************************************************************************************
     function detailRow(tableID, row, rowLabel, rowValue) {
-        $('#' + tableID + ' tbody').append($('<tr>', { id: tableID + 'Row' + row }));
-        $('#' + tableID + 'Row' + row).append($('<td>', { text: rowLabel }));
-        $('#' + tableID + 'Row' + row).append($('<td>', { text: rowValue }));
+            $('#' + tableID + ' tbody').append($('<tr>', { id: tableID + 'Row' + row }));
+            $('#' + tableID + 'Row' + row).append($('<td>', { text: rowLabel }));
+            $('#' + tableID + 'Row' + row).append($('<td>', { text: rowValue }));
     }
 
     // Loops through data categories and sets up table passing relevent data to detail Row function.
@@ -161,7 +161,7 @@ function urbanAreaDetails(data) {
                 //Build the current row.
                 detailRow(tableID, r, rowLabel, formatedValue, valueType);
             } catch (e) {
-                console.log("Error in urban area details - " + valueType)
+                console.log("Error in urban area details - " + e)
             }
         }
     }
